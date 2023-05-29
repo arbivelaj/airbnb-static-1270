@@ -1,0 +1,15 @@
+<p>hello from our new page</p>
+
+<%= link_to "discover cheap flats", cheap_path, class: "btn btn-primary" %>
+
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-4">
+        <%= link_to "visit this flat", flat_path(flat['id']) %>
+        <img src="<%= flat['imageUrl'] %>" alt="">
+        <p><%= flat['name'] %>, $ <%= flat['price'] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

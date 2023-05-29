@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <% @cheap_flats.each do |flat| %>
+      <div class="col-4">
+        <img src="<%= flat['imageUrl'] %>" alt="">
+        <p><%= flat['name'] %>, $ <%= flat['price'] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
